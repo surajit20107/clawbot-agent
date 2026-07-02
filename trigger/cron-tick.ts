@@ -7,7 +7,7 @@ export const cronTick = schedules.task({
   id: "cron-tick",
   cron: "* * * * *",
   maxDuration: 30,
-  run: async (payload) => {
+  run: async (payload: any) => {
     const now = payload.timestamp ?? new Date();
 
     logger.info("Cron tick firing", { now: now.toISOString() });
