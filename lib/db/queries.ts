@@ -708,6 +708,26 @@ export async function updateCronJobAfterRun({
   }
 }
 
+export async function updateCronJobNextRunAt({
+  id,
+  nextRunAt,
+}: {
+  id: string;
+  nextRunAt: Date;
+}) {
+  try {
+    await db
+      .update(cronJob)
+      .set({ nextRunAt })
+      .where(eq(cronJob.id, id));
+  } catch (_error) {
+    throw new ChatbotError(
+      "bad_request:database",
+      "Failed to update cron job next run time"
+    );
+  }
+}
+
 export async function deleteCronJob({
   id,
   userId,
