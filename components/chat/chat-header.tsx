@@ -42,8 +42,6 @@ function PureChatHeader({
         <Link
           className="flex size-8 items-center justify-center rounded-lg"
           href={composioHref}
-          rel="noopener noreferrer"
-          target="_blank"
         >
           <Image
             alt="Composio"
@@ -74,8 +72,6 @@ function PureChatHeader({
         <Link
           className="flex size-9 items-center justify-center rounded-lg border border-border bg-background hover:bg-muted"
           href={composioHref}
-          rel="noopener noreferrer"
-          target="_blank"
         >
           <Image
             alt="Composio"
