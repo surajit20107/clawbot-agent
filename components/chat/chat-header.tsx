@@ -85,19 +85,6 @@ function PureChatHeader({
             width={19}
           />
         </Link>
-        <Button
-          asChild
-          className="rounded-lg bg-foreground px-4 text-background hover:bg-foreground/90"
-        >
-          <Link
-            href="https://vercel.com/templates/next.js/chatbot"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <VercelIcon size={16} />
-            Deploy with Vercel
-          </Link>
-        </Button>
       </div>
     </header>
   );
