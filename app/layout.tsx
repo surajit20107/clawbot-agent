@@ -7,8 +7,8 @@ import "./globals.css";
 import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://chat.vercel.ai"),
-  title: "OpenClaw Clone with Composio",
+  metadataBase: new URL("https://suraclaw.vercel.app"),
+  title: "SuraClaw | OpenClaw Clone with Composio",
   description:
     "AI agent built on the Vercel AI SDK with Composio tools, Supermemory, and Telegram.",
 };
