@@ -1,0 +1,1 @@
+ALTER TABLE "CronJob" ADD COLUMN "lastOutput" text;
