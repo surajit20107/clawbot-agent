@@ -41,7 +41,7 @@ async function AgentSettingsContent() {
           className="text-muted-foreground text-sm hover:underline"
           href="/admin"
         >
-          ← Composio admin
+          ← Dashboard
         </a>
       </div>
 

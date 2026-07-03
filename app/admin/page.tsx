@@ -4,6 +4,8 @@ import { redirect } from "next/navigation";
 import { auth } from "@/app/(auth)/auth";
 import { Composio } from "@composio/core";
 import { VercelProvider } from "@composio/vercel";
+import Link from "next/link";
+import { Bot, CalendarClock, Send } from "lucide-react";
 
 type ConnectedAccountSummary = {
   id?: string;
@@ -128,12 +130,31 @@ async function AdminContent() {
   const connectedToolkits =
     toolkitState?.items.filter((t) => t.connection?.isActive) ?? [];
   const availableToolkits =
-    toolkitState?.items.filter(
-      (t) => !t.connection?.isActive && !t.isNoAuth
-    ) ?? [];
+    toolkitState?.items.filter((t) => !t.connection?.isActive && !t.isNoAuth) ??
+    [];
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-12">
+    <main className="mx-auto max-w-5xl ">
+      <div className="px-6 py-12 flex flex-row gap-6 justify-end items-center">
+        <div className="flex flex-row gap-1">
+          <Link href="/admin/agent" className="flex flex-col items-center">
+            <Bot />
+            Agent
+          </Link>
+        </div>
+        <div className="flex flex-row gap-1">
+          <Link href="/admin/schedules" className="flex flex-col items-center">
+            <CalendarClock />
+            Schedules
+          </Link>
+        </div>
+        <div className="flex flex-row gap-1">
+          <Link href="/admin/telegram" className="flex flex-col items-center">
+            <Send />
+            Telegram
+          </Link>
+        </div>
+      </div>
       <div className="mb-8">
         <h1 className="font-semibold text-2xl tracking-tight">Admin</h1>
         <p className="mt-1 text-muted-foreground text-sm">
